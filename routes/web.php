@@ -13,12 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-<<<<<<< HEAD
-Route::get('/', 'App\Http\Controllers\ItemController@index');
-
-=======
 Route::get('/', function () {
-    return view('welcome');
+    return ('<h1>{{ $result }}</h1><br>
+    <h2>{{ $comment }}</h2>');
 });
 
 Route::get('/comments/freeword/{msg}', function($msg) {
@@ -28,4 +25,4 @@ Route::get('/comments/freeword/{msg}', function($msg) {
 Route::get('/comments/{greeting}', [
     App\Http\Controllers\GreetController::class, 'result'
 ]);
->>>>>>> 214b9cbd235ca978d08fba2dd18f114a253eff8b
+
